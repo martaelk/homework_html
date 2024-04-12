@@ -1,0 +1,140 @@
+body {
+    background: rgb(111, 108, 94);
+    font-family: cursive;
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    height: 100vh;
+    
+
+    display: grid;
+    grid-gap: 10px;
+    
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer"
+}
+
+header {
+    
+    align-items: center;
+    padding-bottom: 1px solid  rgb(97, 95, 83);
+    background: rgb(138, 133, 112);
+    grid-area: header;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 20% 60% 15%;
+    
+    grid-gap: 10px;
+    grid-template-areas:
+        "brand nav tools";
+}
+
+.nav a {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: #e7b354;
+  }
+
+  
+  .tools a {
+    float: left;
+    color: #e7b354;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+
+  .hero {
+    grid-area: hero;
+    display: grid;
+    padding: 2px;
+    grid-template-columns: 30% 40% 20%;
+    grid-gap: 10px;
+    grid-template-areas:
+        "feature action";
+    background: rgb(167, 159, 127);
+    font-size: 13.5px;
+  }
+
+  .hero .action  {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px; 
+    text-align: center;
+    grid-area: action;
+    
+  }
+
+  .hero .action a {
+    text-decoration: none;
+    color: #e7b354;
+    background: rgb(138, 133, 112);
+  }
+  
+  .hero .feature  { 
+    grid-area: feature;
+  }
+  
+  /* .desktop-ad {
+    grid-area: ad;
+    background: rgb(138, 133, 112);
+  } */
+
+
+  main {
+    grid-area: body;
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 30% 40% 10%;
+    grid-gap: 10px;
+    grid-template-areas:
+        "feature listing sidebar";
+    
+  }
+ 
+main .article-feature {
+    grid-area: feature;
+    background: rgb(240, 235, 217);
+  } 
+
+  .article-feature h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+}
+.article-feature p {
+    font-size: 1.2rem;
+ 
+}
+
+main .article-listing {
+  grid-area: listing;
+  background: rgb(240, 235, 217);
+} 
+
+
+
+.sidebar {
+  display: grid;
+
+}
+
+.sidebar .sidebar-feature {
+  display: grid;
+  grid-area: sidebar;
+  background: rgb(240, 235, 217);
+}
+
+footer {
+  grid-area: footer; 
+  background: rgb(240, 235, 217);
+
+} 
