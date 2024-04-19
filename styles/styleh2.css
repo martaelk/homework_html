@@ -1,7 +1,7 @@
 body {
-    background: rgb(111, 108, 94);
+    background: #F7F1F0;
     font-family: cursive;
-    margin: 0;
+    margin: 30px;
     font-size: 16px;
     text-align: center;
     height: 100vh;
@@ -21,7 +21,7 @@ header {
     
     align-items: center;
     padding-bottom: 1px solid  rgb(97, 95, 83);
-    background: rgb(138, 133, 112);
+    background: #c3a6a0;
     grid-area: header;
     font-size: 14px;
     display: grid;
@@ -39,13 +39,13 @@ header {
     justify-self: center;
     font-size: 25px;
     text-decoration: none;
-    color: #e7b354;
+    color: #262220;
   }
 
   
   .tools a {
     float: left;
-    color: #e7b354;
+    color: #262220;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -56,12 +56,13 @@ header {
     grid-area: hero;
     display: grid;
     padding: 2px;
-    grid-template-columns: 30% 40% 20%;
+    grid-template-columns: 30% 40% 30%;
     grid-gap: 10px;
     grid-template-areas:
-        "feature action";
-    background: rgb(167, 159, 127);
-    font-size: 13.5px;
+        "feature action ad";
+    background: #c3a6a0;
+    font-size: 12.5px;
+    
   }
 
   .hero .action  {
@@ -81,35 +82,52 @@ header {
   
   .hero .feature  { 
     grid-area: feature;
+  
+    
+    padding: 10px;
+    margin-top: 20px; 
   }
   
-  /* .desktop-ad {
-    grid-area: ad;
-    background: rgb(138, 133, 112);
-  } */
-
+  .hero .desktop-ad {
+   
+    padding: 10px;
+    margin-top: 20px; 
+  }
+  .desktop-ad:hover {
+    opacity: 0.5;
+}
+  .hero .desktop-ad  img {
+    border-radius: 15%;
+   
+  }
 
   main {
     grid-area: body;
     display: grid;
     padding: 5px;
-    grid-template-columns: 30% 40% 10%;
+    grid-template-columns: 30% 40% 30%;
     grid-gap: 10px;
     grid-template-areas:
         "feature listing sidebar";
+    background: #e7d2ce;
     
   }
  
 main .article-feature {
     grid-area: feature;
-    background: rgb(240, 235, 217);
+    
   } 
 
   .article-feature h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
+
     
 }
+b, strong {
+  background: #b99682;
+  }
+  
 .article-feature p {
     font-size: 1.2rem;
  
@@ -117,24 +135,81 @@ main .article-feature {
 
 main .article-listing {
   grid-area: listing;
-  background: rgb(240, 235, 217);
+  
+  padding: 10px;
+  margin-top: 20px;
+  
 } 
 
 
 
-.sidebar {
-  display: grid;
+main .sidebar {
+  grid-area: sidebar;
+  padding: 50px;
+  margin-top: 60px;
+
 
 }
 
-.sidebar .sidebar-feature {
-  display: grid;
-  grid-area: sidebar;
-  background: rgb(240, 235, 217);
+main .sidebar .sidebar-feature {
+  /*  */
 }
 
 footer {
   grid-area: footer; 
-  background: rgb(240, 235, 217);
+  background: #a15c38;
 
 } 
+
+
+/* @media (min-width: 576px) {
+  body {
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "sidebar"
+        "footer";
+  }
+  header {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "brand nav tools";
+  }
+  .hero {
+    grid-template-areas:
+        "feature"
+        "action";
+  }
+/* .hero .feature {
+  display: flex;
+} */
+
+
+
+  /* main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "feature ad"
+        "listing listing";
+  }
+
+
+  .sidebar {
+    display: grid;
+  }
+
+  .desktop-ad img {
+    width: 100px;
+
+  } */ */
+
+
+
+
+
+  @media (min-width: 992px) {
+
+  }
