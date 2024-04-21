@@ -1,215 +1,342 @@
 body {
-    background: #F7F1F0;
-    font-family: cursive;
-    margin: 30px;
-    font-size: 16px;
-    text-align: center;
-    height: 100vh;
-    
-
-    display: grid;
-    grid-gap: 10px;
-    
-    grid-template-areas:
-        "header"
-        "hero"
-        "body"
-        "footer"
+  background: #F7F1F0;
+  font-family: cursive;
+  margin: 30px;
+  font-size: 16px;
+  text-align: center;
+  height: 100vh;
+ 
 }
 
 header {
-    
-    align-items: center;
-    padding-bottom: 1px solid  rgb(97, 95, 83);
-    background: #c3a6a0;
-    grid-area: header;
-    font-size: 14px;
-    display: grid;
-    grid-template-columns: 20% 60% 15%;
-    
-    grid-gap: 10px;
-    grid-template-areas:
-        "brand nav tools";
+      
+  align-items: center;
+  padding-bottom: 1px solid  rgb(97, 95, 83);
+  background: #c3a6a0;
+  font-size: 14px;
+  grid-area: header;
 }
 
 .nav a {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-self: center;
-    font-size: 25px;
-    text-decoration: none;
-    color: #262220;
-  }
-
-  
-  .tools a {
-    float: left;
-    color: #262220;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-  }
-
-  .hero {
-    grid-area: hero;
-    display: grid;
-    padding: 2px;
-    grid-template-columns: 30% 40% 30%;
-    grid-gap: 10px;
-    grid-template-areas:
-        "feature action ad";
-    background: #c3a6a0;
-    font-size: 12.5px;
-    
-  }
-
-  .hero .action  {
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px; 
-    text-align: center;
-    grid-area: action;
-    
-  }
-
-  .hero .action a {
-    text-decoration: none;
-    color: #e7b354;
-    background: rgb(138, 133, 112);
-  }
-  
-  .hero .feature  { 
-    grid-area: feature;
-  
-    
-    padding: 10px;
-    margin-top: 20px; 
-  }
-  
-  .hero .desktop-ad {
-   
-    padding: 10px;
-    margin-top: 20px; 
-  }
-  .desktop-ad:hover {
-    opacity: 0.5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+  font-size: 25px;
+  text-decoration: none;
+  color: #262220;
 }
-  .hero .desktop-ad  img {
-    border-radius: 15%;
-   
-  }
 
-  main {
-    grid-area: body;
-    display: grid;
-    padding: 5px;
-    grid-template-columns: 30% 40% 30%;
-    grid-gap: 10px;
-    grid-template-areas:
-        "feature listing sidebar";
-    background: #e7d2ce;
-    
-  }
- 
-main .article-feature {
-    grid-area: feature;
-    
-  } 
+.hero .action  {
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px; 
+  text-align: center;
+  grid-area: action;
+  
+}
 
-  .article-feature h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.hero .action a {
+  text-decoration: none;
+  color: #e7b354;
+  background: rgb(138, 133, 112);
+}
 
+.hero .feature  { 
+  grid-area: feature;
+  padding: 10px;
+  margin-top: 20px; 
+  grid-area:  feature; 
+}
+
+.desktop-ad {
+  padding: 10px;
+  background: #e6d8d5;
+   grid-area:  desktop-ad; 
     
+  
+}
+.desktop-ad:hover {
+  opacity: 0.5;
+}
+.desktop-ad img {
+  border-radius: 15%;
+  height: 175px;
+
+}
+
+
+.tools a {
+  float: left;
+  color: #262220;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+main {
+  padding: 5px;
+  background: #e7d2ce;
+  
+}
+main .article-feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+
+
 }
 b, strong {
-  background: #b99682;
-  }
-  
+background: #b99682;
+}
+
 .article-feature p {
-    font-size: 1.2rem;
- 
-}
-
-main .article-listing {
-  grid-area: listing;
-  
-  padding: 10px;
-  margin-top: 20px;
-  
-} 
-
-
-
-main .sidebar {
-  grid-area: sidebar;
-  padding: 50px;
-  margin-top: 60px;
-
+  font-size: 1.2rem;
 
 }
 
-main .sidebar .sidebar-feature {
-  /*  */
-}
+.sidebar  {
+  padding: 125px;
+  padding-bottom: 215px;
+  background: #e6c8c1;
+  }
 
-footer {
-  grid-area: footer; 
-  background: #a15c38;
+  .footer {
+    padding: 5px;
+    margin:  auto;
+    background: #a15c38;
+  } 
 
-} 
-
-
-/* @media (min-width: 576px) {
+@media only screen and (min-width: 992px) {
   body {
-    grid-template-rows: auto auto 1fr auto auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "header header header"
+        "hero hero desktop-ad"
+        "body body sidebar"
+        "footer footer footer";
+  }
+
+  header {
+     
+      display: grid;
+      grid-template-columns: 20% 60% 15%;
+      grid-area: header;
+      grid-gap: 10px;
+      grid-template-areas:
+          "brand nav tools";
+  }
+    .hero {
+      grid-area: hero;
+      display: grid;
+      padding: 2px;
+      grid-template-columns: 30% 90% 10%;
+      grid-gap: 10px;
+      grid-template-areas:
+          "feature action desktop-ad";
+      background: #c3a6a0;
+      font-size: 12.5px;
+      
+    }
+
+    main {
+      grid-area: body;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-gap: 10px;
+      grid-template-areas:
+          "feature listing";
+      
+    }
+  
+    main .article-feature {
+        grid-area: feature;
+        
+      } 
+
+   
+
+    main .article-listing {
+      grid-area: listing;
+      padding: 10px;
+      margin-top: 20px;
+      
+    } 
+    main .mobile-ad {
+      display: none;
+    
+    }
+  .sidebar .sidebar-feature {
+    display: grid;
+    grid-area: sidebar;
+  }
+
+  footer {
+    
+    grid-area: footer;
+    padding: 5px;
+
+
+  } 
+}
+
+ @media only screen and (max-width: 992px) {
+  body {
+    /* display: grid;  */
+    grid-template-columns: auto auto auto;
     grid-template-areas:
         "header"
         "hero"
-        "body"
+        "main"
         "sidebar"
         "footer";
   }
-  header {
+   header {
+    display: grid;
+    grid-area: header;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
         "brand nav tools";
   }
-  .hero {
-    grid-template-areas:
-        "feature"
-        "action";
-  }
-/* .hero .feature {
-  display: flex;
-} */
 
-
-
-  /* main {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "feature ad"
-        "listing listing";
-  }
-
-
-  .sidebar {
+   .hero {
     display: grid;
+    grid-area: hero;
+    grid-template-columns:  1fr;
+    grid-template-areas:
+        "feature" 
+        "action";
+    justify-items: center;
+    
+  }
+  .hero .feature {
+    grid-area: feature;
+    display: block;
+  }
+  .hero .action{
+    grid-area: action;
+    display: block;
   }
 
-  .desktop-ad img {
-    width: 100px;
-
-  } */ */
 
 
+  main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 3fr 1fr ;
+   
+    grid-template-rows:  auto 1fr; 
+   
+    grid-template-areas:
+        "feature desktop-ad"
+        "listing listing";
+  } 
+
+  main .article-feature {
+    grid-area:  feature;
+  }
+  
+  .desktop-ad {
+    display: none; 
+    
+  }
+  main .mobile-ad {
+    width: 300px;
+    margin: auto;
+  
+  }
+  
+  main .article-listing {
+    grid-area: listing;
+  }
+  .sidebar .sidebar-feature{
+    grid-area: sidebar;
+    display: block;
+  }
+
+  
+ }
 
 
 
-  @media (min-width: 992px) {
+
+ @media only screen and (max-width: 576px) {
+  body {
+     /* display: grid;  */
+    
+    grid-template-areas:
+    "header"
+    "hero"
+    "body"
+    "footer";
+  }
+  header {
+     
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-area: header;
+    
+    grid-template-areas:
+    "brand brand"
+    "nav tools";
+}
+ header .brand {
+  grid-area: brand;
+ }
+ header .nav {
+  grid-area: nav;
+ }
+ header .tools {
+  grid-area: tools;
+ }
+
+ .hero {
+  grid-area: hero;
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+      "action";
+  
+}
+.hero .action {
+  grid-area: action;
+}
+.hero .feature {
+  display: none;
+}
+.desktop-ad {
+  display: none;
+}
+main {
+  grid-area: body;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "feature"
+  "mobile-ad"
+  "listing";
+  
+}
+
+main .article-feature {
+    grid-area: feature;
+  } 
+
+main .article-listing {
+  grid-area: listing;
+  } 
+main .mobile-ad {
+  width: 200px;
+  margin: 0 auto;
+
+}
+.sidebar {
+  display: none;
+}
 
   }
